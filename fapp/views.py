@@ -27,7 +27,7 @@ import re
 
 
 env = environ.Env()
-
+ 
 environ.Env.read_env()
 
 def home(request):

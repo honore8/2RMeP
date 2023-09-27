@@ -14,6 +14,9 @@ from django.core.mail import send_mail, BadHeaderError
 from django.utils.timezone import datetime
 from django.db.models import Count
 
+from django.views.decorators.csrf import csrf_protect
+
+
 from fapp.helpers import get_side_bars_data
 
 from .models import Comment, DownVote, Post, UpVote, User
@@ -84,6 +87,8 @@ def login_user(request):
 
     return render(request, 'fapp/login.html', context)
 
+
+@csrf_protect
 def register(request):
  
     if request.user.is_authenticated:
@@ -110,6 +115,8 @@ def register(request):
 def logout_user(request):
     logout(request)
     return redirect(reverse("fapp:home"))
+
+
 
 def password_reset_request(request):
     if request.method == 'POST':

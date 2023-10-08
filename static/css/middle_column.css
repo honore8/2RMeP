@@ -15,7 +15,7 @@
   .add_post > form > input{
     align-self: flex-end;
     margin-top: .5rem;
-    background-color: #FE724C;
+    background-color: #1F055D;
     padding: .5rem 1rem;
     border-radius: 8px;
     color: #fff;
@@ -24,7 +24,7 @@
     transition: all .5s ease-in;
   }
   .add_post > form > input:hover{
-    background-color: hsl(13, 99%, 50%);
+    background-color: #27229E;
     cursor: pointer;
   }
 
